@@ -1,0 +1,177 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\GithubProject\\MultiTenant\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{64B90196-F0FA-4FB6-B211-9EEFFECA2847}|Application\\Application.csproj|d:\\githubproject\\multitenant\\application\\applicationservicemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64B90196-F0FA-4FB6-B211-9EEFFECA2847}|Application\\Application.csproj|solutionrelative:application\\applicationservicemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FD8B05D-A07F-417C-B179-0558482BC091}|Infrastructure\\Infrastructure.csproj|d:\\githubproject\\multitenant\\infrastructure\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FD8B05D-A07F-417C-B179-0558482BC091}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47BB4E6C-3736-465D-B50B-B0170DED021B}|MultiTenant\\MultiTenant.csproj|d:\\githubproject\\multitenant\\multitenant\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47BB4E6C-3736-465D-B50B-B0170DED021B}|MultiTenant\\MultiTenant.csproj|solutionrelative:multitenant\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64B90196-F0FA-4FB6-B211-9EEFFECA2847}|Application\\Application.csproj|d:\\githubproject\\multitenant\\application\\features\\category\\module\\categorymodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64B90196-F0FA-4FB6-B211-9EEFFECA2847}|Application\\Application.csproj|solutionrelative:application\\features\\category\\module\\categorymodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64B90196-F0FA-4FB6-B211-9EEFFECA2847}|Application\\Application.csproj|d:\\githubproject\\multitenant\\application\\features\\tenant\\module\\tenantmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64B90196-F0FA-4FB6-B211-9EEFFECA2847}|Application\\Application.csproj|solutionrelative:application\\features\\tenant\\module\\tenantmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FD8B05D-A07F-417C-B179-0558482BC091}|Infrastructure\\Infrastructure.csproj|d:\\githubproject\\multitenant\\infrastructure\\using.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FD8B05D-A07F-417C-B179-0558482BC091}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\using.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47BB4E6C-3736-465D-B50B-B0170DED021B}|MultiTenant\\MultiTenant.csproj|d:\\githubproject\\multitenant\\multitenant\\endpoints\\categoryapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47BB4E6C-3736-465D-B50B-B0170DED021B}|MultiTenant\\MultiTenant.csproj|solutionrelative:multitenant\\endpoints\\categoryapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47BB4E6C-3736-465D-B50B-B0170DED021B}|MultiTenant\\MultiTenant.csproj|d:\\githubproject\\multitenant\\multitenant\\endpoints\\routes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47BB4E6C-3736-465D-B50B-B0170DED021B}|MultiTenant\\MultiTenant.csproj|solutionrelative:multitenant\\endpoints\\routes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Using.cs",
+              "DocumentMoniker": "D:\\GithubProject\\MultiTenant\\Infrastructure\\Using.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Using.cs",
+              "ToolTip": "D:\\GithubProject\\MultiTenant\\Infrastructure\\Using.cs",
+              "RelativeToolTip": "Infrastructure\\Using.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T10:32:30.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CategoryModule.cs",
+              "DocumentMoniker": "D:\\GithubProject\\MultiTenant\\Application\\Features\\Category\\Module\\CategoryModule.cs",
+              "RelativeDocumentMoniker": "Application\\Features\\Category\\Module\\CategoryModule.cs",
+              "ToolTip": "D:\\GithubProject\\MultiTenant\\Application\\Features\\Category\\Module\\CategoryModule.cs",
+              "RelativeToolTip": "Application\\Features\\Category\\Module\\CategoryModule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T11:12:12.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TenantModule.cs",
+              "DocumentMoniker": "D:\\GithubProject\\MultiTenant\\Application\\Features\\Tenant\\Module\\TenantModule.cs",
+              "RelativeDocumentMoniker": "Application\\Features\\Tenant\\Module\\TenantModule.cs",
+              "ToolTip": "D:\\GithubProject\\MultiTenant\\Application\\Features\\Tenant\\Module\\TenantModule.cs",
+              "RelativeToolTip": "Application\\Features\\Tenant\\Module\\TenantModule.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAACgAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T10:53:27.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\GithubProject\\MultiTenant\\MultiTenant\\Program.cs",
+              "RelativeDocumentMoniker": "MultiTenant\\Program.cs",
+              "ToolTip": "D:\\GithubProject\\MultiTenant\\MultiTenant\\Program.cs",
+              "RelativeToolTip": "MultiTenant\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T18:37:22.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ServiceRegistration.cs",
+              "DocumentMoniker": "D:\\GithubProject\\MultiTenant\\Infrastructure\\ServiceRegistration.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\ServiceRegistration.cs",
+              "ToolTip": "D:\\GithubProject\\MultiTenant\\Infrastructure\\ServiceRegistration.cs",
+              "RelativeToolTip": "Infrastructure\\ServiceRegistration.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAwwA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T18:36:52.05Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApplicationServiceManager.cs",
+              "DocumentMoniker": "D:\\GithubProject\\MultiTenant\\Application\\ApplicationServiceManager.cs",
+              "RelativeDocumentMoniker": "Application\\ApplicationServiceManager.cs",
+              "ToolTip": "D:\\GithubProject\\MultiTenant\\Application\\ApplicationServiceManager.cs",
+              "RelativeToolTip": "Application\\ApplicationServiceManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T18:36:09.585Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "9a278756-dfc1-462e-9e33-ac56a7f943df",
+        "Display": 0,
+        "X": -5,
+        "Y": 0,
+        "Width": 1716,
+        "Height": 655,
+        "WindowState": 2
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CategoryAPI.cs",
+              "DocumentMoniker": "D:\\GithubProject\\MultiTenant\\MultiTenant\\EndPoints\\CategoryAPI.cs",
+              "RelativeDocumentMoniker": "MultiTenant\\EndPoints\\CategoryAPI.cs",
+              "ToolTip": "D:\\GithubProject\\MultiTenant\\MultiTenant\\EndPoints\\CategoryAPI.cs",
+              "RelativeToolTip": "MultiTenant\\EndPoints\\CategoryAPI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T11:01:36.858Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Routes.cs",
+              "DocumentMoniker": "D:\\GithubProject\\MultiTenant\\MultiTenant\\EndPoints\\Routes.cs",
+              "RelativeDocumentMoniker": "MultiTenant\\EndPoints\\Routes.cs",
+              "ToolTip": "D:\\GithubProject\\MultiTenant\\MultiTenant\\EndPoints\\Routes.cs",
+              "RelativeToolTip": "MultiTenant\\EndPoints\\Routes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T11:02:09.715Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
