@@ -11,4 +11,4 @@ global using Infrastructure.Persistence.Middleware;
 
 global using Application.Common.Extension;
 global using Carter;
-global using ServiceCollector.Core;
+global using Gurung.ServiceRegister;

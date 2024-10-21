@@ -29,4 +29,10 @@
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="Gurung.ServiceRegister">
+      <HintPath>..\..\..\Nuget_Packages\ServiceRegister\ServiceRegister\bin\Debug\net6.0\Gurung.ServiceRegister.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
