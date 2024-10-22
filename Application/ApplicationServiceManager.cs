@@ -3,20 +3,19 @@ using Application.Exceptions;
 using Application.Features.Tenant.Command.TenantAdd;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
-using ServiceCollector.Abstractions;
 using System.Reflection;
-
+using Gurung.ServiceRegister;
 namespace Application
 {
-    public class ApplicationServiceManager : IServiceDiscovery
+    public class ApplicationServiceManager : IServicesRegistration
     {
-        public void AddServices(IServiceCollection serviceCollection)
+        public void AddServices(IServiceCollection services)
         {
-            serviceCollection.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly(), ServiceLifetime.Scoped);
-            serviceCollection.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
-            serviceCollection.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
-            serviceCollection.AddControllersWithViews(options => options.Filters.Add(new ApiExceptionFilter()));
-            serviceCollection.AddSingleton<ApiExceptionFilter>();
+            services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly(), ServiceLifetime.Scoped);
+            services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+            services.AddControllersWithViews(options => options.Filters.Add(new ApiExceptionFilter()));
+            services.AddSingleton<ApiExceptionFilter>();
         }
     }
 }

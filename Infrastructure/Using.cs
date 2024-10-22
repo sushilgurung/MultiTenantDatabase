@@ -28,4 +28,17 @@ global using Microsoft.Extensions.DependencyInjection;
 global using Application.Interfaces.Provider;
 
 global using Microsoft.AspNetCore.Http;
+global using Microsoft.EntityFrameworkCore.Design;
 
+
+
+global using Application.Interfaces.DbContext;
+global using Carter;
+global using Domain.Settings;
+global using Gurung.ServiceRegister;
+global using Infrastructure.Persistence.Provider;
+global using Microsoft.AspNetCore.Authentication.Cookies;
+global using Microsoft.AspNetCore.Authentication.JwtBearer;
+
+global using Microsoft.IdentityModel.Tokens;
+global using System.Text;

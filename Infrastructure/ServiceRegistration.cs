@@ -1,33 +1,16 @@
-﻿using Application.Interfaces.DbContext;
-using Application.Interfaces.Provider;
-using Carter;
-using Domain.Settings;
-using Infrastructure.Persistence.Provider;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.IdentityModel.Tokens;
-using ServiceCollector.Abstractions;
-using System.Text;
+﻿
 
 namespace Infrastructure;
 
-public static class ServiceRegistration
+public class ServiceRegistration : IServicesRegistrationWithConfig
 {
-
-    public static void AddPersistenceInfrastructure(this IServiceCollection services, IConfiguration configuration)
+    public void AddServices(IServiceCollection services, IConfiguration configuration)
     {
         services.AddCarter(configurator: c =>
         {
             c.WithValidatorLifetime(ServiceLifetime.Scoped);
         });
         services.AddHttpContextAccessor();  // Needed to access HttpContext
-
-        services.ConfigureDbContext(configuration);
-        services.ConfigureIdentity(configuration);
 
         services.Configure<JwtTokenSetting>(configuration.GetSection("JwtSettings"));
 
@@ -37,35 +20,36 @@ public static class ServiceRegistration
         RepositoryServiceRegistration.ConfigureServices(services);
         // Current tenant service with scoped lifetime (created per each request)
 
-        services.AddServices()
-            .AddRepositories();
     }
+}
 
-    internal static  IServiceCollection AddServices(this IServiceCollection services)
+
+public class DatabaseRegistration : IDbServiceRegistration
+{
+    public void AddServices(IServiceCollection services, IConfiguration configuration)
     {
-        // Current tenant service with scoped lifetime (created per each request)
-        services.AddScoped<ICurrentTenantService, CurrentTenantService>();
-        services.AddScoped<ITenantUserManagementService, TenantUserManagementService>();
-        services.AddScoped<ITenancyManagerService, TenancyManagerService>();
-        services.AddTransient<ITokenService, TokenService>();
-        return services;
+        services.AddScoped<ITenantContextProvider, TenantContextProvider>();
+        services.AddDbContext<MainDbContext>(options =>
+        {
+            options.UseSqlServer(
+                configuration.GetConnectionString("DefaultConnection"),
+                sqlOptions => sqlOptions.MigrationsAssembly(typeof(MainDbContext).Assembly.FullName));
+        });
+        services.AddDbContextFactory<TenantDbContext>();
+        services.AddScoped<ITenantDbContext>(provider => provider.GetRequiredService<TenantDbContext>());
     }
+}
 
-    internal static void AddRepositories(this IServiceCollection services)
+
+public class IdentityRegistration : IIdentityServicesRegistration
+{
+    public void AddServices(IServiceCollection services, IConfiguration configuration)
     {
-        services.AddTransient<ICategoriesRepository, CategoriesRepository>();
-        services.AddScoped<ITenantsRepository, TenantsRepository>();
-    }
-
-
-    internal static IServiceCollection ConfigureIdentity(this IServiceCollection services, IConfiguration configuration)
-    {
-
         services.AddIdentityCore<ApplicationUser>()
-             .AddRoles<ApplicationRole>()
-             .AddSignInManager<SignInManager<ApplicationUser>>()
-             .AddEntityFrameworkStores<MainDbContext>()
-             .AddDefaultTokenProviders();
+            .AddRoles<ApplicationRole>()
+            .AddSignInManager<SignInManager<ApplicationUser>>()
+            .AddEntityFrameworkStores<MainDbContext>()
+            .AddDefaultTokenProviders();
 
         services.AddIdentityCore<TenantUser>()
                 .AddSignInManager<SignInManager<TenantUser>>()
@@ -121,22 +105,32 @@ public static class ServiceRegistration
                 ValidateIssuerSigningKey = true
             };
         });
-        return services;
-    }
-
-    internal static IServiceCollection ConfigureDbContext(this IServiceCollection services, IConfiguration configuration)
-    {
-        services.AddScoped<ITenantContextProvider, TenantContextProvider>();
-        services.AddDbContext<MainDbContext>(options =>
-        {
-            options.UseSqlServer(
-                configuration.GetConnectionString("DefaultConnection"),
-                sqlOptions => sqlOptions.MigrationsAssembly(typeof(MainDbContext).Assembly.FullName));
-        });
-        services.AddDbContextFactory<TenantDbContext>();
-        services.AddScoped<ITenantDbContext>(provider => provider.GetRequiredService<TenantDbContext>());
-        return services;
     }
 }
+
+
+public class RepositoryRegistration : IRepositoriesRegistration
+{
+    public void AddServices(IServiceCollection services)
+    {
+        services.AddScoped<ICategoriesRepository, CategoriesRepository>();
+        services.AddScoped<ITenantsRepository, TenantsRepository>();
+    }
+}
+
+public class ServicesRegistration : IServicesRegistration
+{
+    public void AddServices(IServiceCollection services)
+    {
+        // Current tenant service with scoped lifetime (created per each request)
+        services.AddScoped<ICurrentTenantService, CurrentTenantService>();
+        services.AddScoped<ITenantUserManagementService, TenantUserManagementService>();
+        services.AddScoped<ITenancyManagerService, TenancyManagerService>();
+        services.AddTransient<ITokenService, TokenService>();
+    }
+}
+
+
+
 
 
