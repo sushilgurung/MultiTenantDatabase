@@ -36,13 +36,7 @@ public class TenantAddCommandHandler(
 {
     public async Task<IResult> Handle(TenantAddCommand request, CancellationToken cancellationToken)
     {
-        _logger.LogInformation("{FunctionName} trigger function received a request for {RequestData}", nameof(TenantAddCommandHandler), JsonConvert.SerializeObject(new
-        {
-            Name = request.Name,
-            BusinessName = request.BusinessName,
-            Logo = request.Logo,
-            DataSource = request.DataSource,
-        }));
+        _logger.LogInformation("{FunctionName} trigger function received a request for {@RequestData}", nameof(TenantAddCommandHandler), request);
 
         var addedDatabase = await _tenancyManagerService.AddTenantDatabseAsync(
         request.Name,

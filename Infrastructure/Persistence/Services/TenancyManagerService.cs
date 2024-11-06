@@ -42,7 +42,7 @@ namespace Infrastructure.Persistence.Services
         {
             try
             {
-                _logger.LogInformation("{FunctionName} trigger function received a request for {RequestData}", nameof(AddTenantDatabseAsync),
+                _logger.LogInformation("{FunctionName} trigger function received a request for {@RequestData}", nameof(AddTenantDatabseAsync),
                 new
                 {
                     Name = name,
